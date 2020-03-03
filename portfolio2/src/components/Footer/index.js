@@ -3,7 +3,7 @@ import "./style.css";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer foot">
       <span>Matthew Noel Master Portfolio 2020</span>
     </footer>
   );

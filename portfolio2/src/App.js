@@ -7,13 +7,14 @@ import ProjectsPage from './pages/ProjectsPage';
 import Footer from './components/Footer';
 //import Slider from "./components/Slider";
 import 'bootstrap/dist/css/bootstrap.css';
+import "./../src/App.css"
 
 import {
   Jumbotron,
   Container,
   Navbar,
   Nav,
-  Carousel,
+  Row,
   Image,
 } from 'react-bootstrap'
 
@@ -29,17 +30,13 @@ class App extends React.Component {
         { title: 'Contact', path: '/contact' },
       ],
       home: {
-        title: "Matthew Noel",
-        subTitle: "My Portfolio",
-        text:"Stay Progressive",
+        title: "My Portfolio",
       },
       about: {
         title: "About Me",
       },
       projects: {
-        title: "My Projects",
-        subTitle: "It's a whole new wave!", 
-        text: "Check out my projects below",
+        title: "Check out my projects below",
       },
       contact: {
         title: "Keep in touch!",
@@ -51,10 +48,9 @@ class App extends React.Component {
       <Router>
         <div>
           <Container className="p-0" fluid>
-            <Jumbotron bg="light" variant="light" fluid={true}>
-              
+            <Jumbotron  className="jumbo" bg="light" variant="light" fluid={true}>
             </Jumbotron>
-            <Navbar className="border-bottom" bg="blue" expand="lg">
+            <Navbar className="border-bottom nav" bg="blue" expand="lg">
               <Navbar.Brand>Matthew Noel</Navbar.Brand>
 
               <Navbar.Toggle
@@ -78,12 +74,13 @@ class App extends React.Component {
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
+            
             <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>} />
             <Route path="/about"  render={() => <AboutPage title={this.state.about.title} />} />
             <Route path="/projects"  render={() => <ProjectsPage title={this.state.projects.title} subTitle={this.state.projects.subTitle} text={this.state.projects.text} />} />
             <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
-            
-            
+
+
             <Footer />
           </Container>
         </div>

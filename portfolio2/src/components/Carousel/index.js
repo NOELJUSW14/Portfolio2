@@ -6,7 +6,7 @@ import galleryImg from "../../images/IMG_1086.JPG";
 import mnmImg from "../../images/mm_monogram_michael_spitz.png";
 import comingImg from "../../images/coming-soon-placeholder.jpg";
 import 'bootstrap/dist/css/bootstrap.css';
-import { Row, Container } from 'react-bootstrap'
+import { Row, Container, Button } from 'react-bootstrap'
 import "../Carousel/style.css"
 //import pics
 
@@ -43,13 +43,6 @@ class Carousel extends React.Component {
           link: 'filler.com',
           selected: false,
         },
-        {
-          id: 4,
-          title: 'Upcoming Projects',
-          imgSrc: comingImg,
-          link: 'filler.com',
-          selected: false,
-        },
       ],
       
     }
@@ -74,7 +67,7 @@ class Carousel extends React.Component {
       return (
         <Card
           item={item}
-          click={(e => this.cardClick(item.id, e))}
+          click={this.cardClick}
           key={item.id}
         />
       )
@@ -86,6 +79,9 @@ class Carousel extends React.Component {
         <Row className="justify-content-around">
           {this.makeItem(this.state.items)}
         </Row>
+        <hr/>
+        <hr/>
+        <hr/>
       </Container>
     )
   }

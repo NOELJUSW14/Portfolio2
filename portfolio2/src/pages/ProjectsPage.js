@@ -2,7 +2,10 @@ import React from "react";
 
 function ProjectsPage() {
   return (
-        <h1>NFL News</h1>
+    <div className="justify-center">
+      <h1>The ProjectsPage is currently unavailable</h1>
+    </div>
+        
   );
 }
 
