@@ -40,16 +40,15 @@ class Slider extends React.Component {
         <div key={index} className="slide">
           {item}
         </div>
-      )
+      );
     })
   }
   render() {
     return (
       <div className="slider">
-        <button>left</button>
-        <button>right</button>
+        {}
       </div>
-    )
+    ) 
   }
 }
 
